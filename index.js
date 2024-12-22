@@ -19,7 +19,7 @@ const responseHeadersToRemove = ["Accept-Ranges", "Content-Length", "Keep-Alive"
         args: ['--no-sandbox', '--disable-setuid-sandbox']
     };
     if (process.env.PUPPETEER_SKIP_CHROMIUM_DOWNLOAD)
-        options.executablePath = '/usr/bin/chromium-browser';
+        options.executablePath = '/app/.chrome-for-testing/chrome-linux64/chrome';
     if (process.env.PUPPETEER_HEADFUL)
         options.headless = false;
     if (process.env.PUPPETEER_USERDATADIR)
